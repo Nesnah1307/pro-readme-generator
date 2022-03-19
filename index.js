@@ -6,51 +6,109 @@ const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const questions = [
-    {
+    { 
         type: 'input',
         name: 'title',
-        message: 'What is the title of your project?'
+        message: 'What is the title of your project? (Required)',
+        validate: titleInput => {
+            if (titleInput) {
+                return true;
+            } else {
+                console.log('Please enter the title of your project.');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'description',
-        message: 'Describe your project:'
+        message: 'Describe your project: (Required)',
+        validate: descriptionInput => {
+            if (descriptionInput) {
+                return true;
+            } else {
+                console.log('Please enter a brief description for your project');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'installation',
-        message: 'Explain the installation process:'
+        message: 'Explain the installation process: (Required)',
+        validate: installationInput => {
+            if (installationInput) {
+                return true;
+            } else {
+                console.log('Please explain the installation instructions');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide instructions for use:'
+        message: 'Provide instructions for use: (Required)',
+        validate: usageInput => {
+            if (usageInput) {
+                return true;
+            } else {
+                console.log('Please describe using your project');
+                return false;
+            }
+        }
     },
     {
         type: 'list',
         name: 'license',
-        message: 'Select a license for your project',
-        choices: ['MIT', 'GNU', 'Apache', 'ISC', 'IBM', 'Mozilla', 'Open']
+        message: 'Select a license for your project (Required)',
+        choices: ['MIT', 'GNU', 'Apache', 'ISC', 'IBM', 'Mozilla', 'Open'],
+        validate: licenseInput => {
+            if (licenseInput) {
+                return true;
+            } else {
+                console.log('Please select a license');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'contributors',
-        message: 'Are there any contributors to your project?'
+        message: 'Are there any contributors to your project?',
+        default: true
     },
     {
         type: 'input',
         name: 'tests',
-        message: 'Are there any tests you would like to write?'
+        message: 'Are there any tests you would like to write?',
+        default: true
     },
     {
         type: 'input',
         name: 'userName',
-        message: 'Enter your GitHub username:'
+        message: 'Enter your GitHub username: (Required)',
+        validate: userNameInput => {
+            if (userNameInput) {
+                return true;
+            } else {
+                console.log('Please enter your GitHub username');
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         name: 'email',
-        message: 'Enter your email address:'
+        message: 'Enter your email address: (Required)',
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter your email');
+                return false;
+            }
+        }
     }
 ];
 
@@ -72,7 +130,9 @@ function writeToFile(fileName, data) {
 };
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    return inquirer.prompt(questions);
+};
 
 // Function call to initialize app
 init();
