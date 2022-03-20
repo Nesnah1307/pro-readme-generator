@@ -62,7 +62,7 @@ const questions = [
         type: 'list',
         name: 'license',
         message: 'Select a license for your project (Required)',
-        choices: ['MIT', 'GNU', 'Apache', 'ISC', 'IBM', 'Mozilla', 'Open'],
+        choices: ['MIT', 'GNU', 'Apache', 'ISC', 'IBM', 'Mozilla', 'Open Source'],
         validate: licenseInput => {
             if (licenseInput) {
                 return true;
@@ -135,4 +135,5 @@ function init() {
 };
 
 // Function call to initialize app
-init();
+init()
+    .then
