@@ -118,7 +118,6 @@ function generateMarkdown(data) {
   
   ## Questions?
   
-  [GitHub Account](https://github.com/${data.github}/)
   ${data.email})
 
 `;
