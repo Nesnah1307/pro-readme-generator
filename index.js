@@ -76,13 +76,13 @@ const questions = [
         type: 'input',
         name: 'contributors',
         message: 'Are there any contributors to your project?',
-        default: true
+        default: false
     },
     {
         type: 'input',
         name: 'tests',
         message: 'Are there any tests you would like to write?',
-        default: true
+        default: false
     },
     {
         type: 'input',
@@ -131,9 +131,13 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    return inquirer.prompt(questions);
+    return inquirer.prompt(questions)
+    .then(generateMarkdown => {
+        console.log(generateMarkdown);
+    })
+    
 };
 
 // Function call to initialize app
 init()
-    .then
+    
