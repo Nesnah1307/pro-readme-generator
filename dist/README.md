@@ -1,8 +1,8 @@
 # Mack
 
-  ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+  ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
   ## Description 
-  no
+  README.md Generator
   
   ## Table of Contents
   
@@ -21,21 +21,21 @@
   * [Questions](#questions)
   
   ## Installation
-  no
+  Clone, npm install inquirer in the command prompt.
   
   ## Usage 
-  no
+  Answer all the questions.
   
   ## License
-  (https://opensource.org/licenses/MIT)
+  (https://github.com/ellerbrock/open-source-badges/)
   
   
   ## Testing
-  no
+  N/A
   
   ## Questions?
   
   [https://github.com/Nesnah1307](https://github.com/Nesnah1307)
 
-  MackDaddy1307@gmail.com)
+  Mack@Mack.org
 
