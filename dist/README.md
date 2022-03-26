@@ -1,8 +1,8 @@
-# mack
+# Mack
 
   ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
   ## Description 
-  asdf
+  no
   
   ## Table of Contents
   
@@ -21,19 +21,21 @@
   * [Questions](#questions)
   
   ## Installation
-  wer
+  no
   
   ## Usage 
-  dfa
+  no
   
   ## License
   (https://opensource.org/licenses/MIT)
   
   
   ## Testing
-  fasd
+  no
   
   ## Questions?
   
-  sadf)
+  [https://github.com/Nesnah1307](https://github.com/Nesnah1307)
+
+  MackDaddy1307@gmail.com)
 

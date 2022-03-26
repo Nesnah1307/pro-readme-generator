@@ -118,7 +118,9 @@ function generateMarkdown(data) {
   
   ## Questions?
   
-  ${data.email})
+  [https://github.com/${data.userName}](https://github.com/${data.userName})
+
+  ${data.email}
 
 `;
 }
