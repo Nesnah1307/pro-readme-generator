@@ -3,31 +3,31 @@
 function renderLicenseBadge(licensePicked) {
  
   if (licensePicked === 'MIT') {
-    return `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]`;
+    return `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
   } 
   
   else if (licensePicked === 'GNU') {
-    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]`;
+    return `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
   }
 
   else if (licensePicked === 'Apache') {
-    return `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)]`;
+    return `![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)`;
   }
 
   else if (licensePicked === 'ISC') {
-    return `[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)]`;
+    return `![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)`;
   }
 
   else if (licensePicked === 'IBM') {
-    return `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)]`;
+    return `![License: IPL 1.0](https://img.shields.io/badge/License-IPL_1.0-blue.svg)`;
   }
 
   else if (licensePicked === 'Mozilla') {
-    return `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]`;
+    return `![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)`;
   }
 
   else if (licensePicked === 'Open Source') {
-    return `[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)]`;
+    return `![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)`;
   }
 
   else {
@@ -39,31 +39,31 @@ function renderLicenseBadge(licensePicked) {
 // If there is no license, return an empty string
 function renderLicenseLink(licensePicked) {
   if (licensePicked === 'MIT') {
-    return `[![License: MIT](https://opensource.org/licenses/MIT)`;
+    return `(https://opensource.org/licenses/MIT)`;
   }
 
   else if (licensePicked === 'GNU') {
-    return `[![License: GPL v3](https://www.gnu.org/licenses/gpl-3.0)`;
+    return `(https://www.gnu.org/licenses/gpl-3.0)`;
   }
 
   else if (licensePicked === 'Apache') {
-    return `[![License](https://opensource.org/licenses/Apache-2.0)`;
+    return `(https://opensource.org/licenses/Apache-2.0)`;
   }
 
   else if (licensePicked === 'ISC') {
-    return `[![License: ISC](https://opensource.org/licenses/ISC)`;
+    return `(https://opensource.org/licenses/ISC)`;
   }
 
   else if (licensePicked === 'IBM') {
-    return `[![License: IPL 1.0](https://opensource.org/licenses/IPL-1.0)`;
+    return `(https://opensource.org/licenses/IPL-1.0)`;
   }
 
   else if (licensePicked === 'Mozilla') {
-    return `[![License: MPL 2.0](https://opensource.org/licenses/MPL-2.0)`;
+    return `(https://opensource.org/licenses/MPL-2.0)`;
   }
 
   else if (licensePicked === 'Open Source') {
-    return `[![Open Source Love](https://github.com/ellerbrock/open-source-badges/)`;
+    return `(https://github.com/ellerbrock/open-source-badges/)`;
   }
 
   else {
@@ -111,7 +111,7 @@ function generateMarkdown(data) {
   
   ## License
   ${renderLicenseLink(data.license)}
-  ${renderLicenseSection}(data.license)}
+  ${renderLicenseSection(data.license)}
   
   ## Testing
   ${data.tests}

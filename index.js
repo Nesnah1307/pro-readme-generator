@@ -75,14 +75,12 @@ const questions = [
     {
         type: 'input',
         name: 'contributors',
-        message: 'Are there any contributors to your project?',
-        default: false
+        message: 'How can someone contribute to your project?',
     },
     {
         type: 'input',
         name: 'tests',
         message: 'Are there any tests you would like to write?',
-        default: false
     },
     {
         type: 'input',
@@ -115,7 +113,7 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) => {
-        fs.writeFile('./dist/README.md', fileName, data, err => {
+        fs.writeFile(fileName, data, err => {
             if (err) {
                 reject(err);
                 return;
@@ -132,9 +130,9 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     return inquirer.prompt(questions)
-    .then(generateMarkdown => {
-        console.log(generateMarkdown);
-    })
+    .then(answers=> {
+       writeToFile('./dist/README.md', generateMarkdown(answers)).then(fileSave => console.log(fileSave))
+    });
     
 };
 
