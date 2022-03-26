@@ -21,14 +21,17 @@
   * [Questions](#questions)
   
   ## Installation
-  Clone, npm install inquirer in the command prompt.
+  Clone, install npm inquirer within the command prompt.
   
   ## Usage 
-  Answer all the questions.
+  Answer the questions
   
   ## License
   (https://github.com/ellerbrock/open-source-badges/)
   
+
+  ## Contribution
+  Not interested.
   
   ## Testing
   N/A
@@ -37,5 +40,5 @@
   
   [https://github.com/Nesnah1307](https://github.com/Nesnah1307)
 
-  Mack@Mack.org
+  Mack@mack.org
 
